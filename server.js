@@ -1,8 +1,8 @@
 var http = require('http');
 var express = require('express');
 var twilio = require('twilio');
-var accountSid = 'ACecdfe73423ced8369e1868be52e7972d';
-var authToken = '04c0df012f0b2eed76af5dcd1ec8c585';
+var accountSid = 'xxx';
+var authToken = 'xxx';
 
 var app = express();
 
@@ -13,8 +13,8 @@ app.post('/voice', function(req, res) {
  var client = require('twilio')(accountSid, authToken);
  client.calls.create({
   url: 'http://demo.twilio.com/docs/voice.xml',
-  to: '+14086744109',
-  from: '+18582951328'
+  to: '+1xxx',
+  from: '+1xxx'
  }, function(err, call) {
  if(err) {
   console.log(err);
